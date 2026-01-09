@@ -59,8 +59,10 @@
 
 <body>
   <div class="card">
+
+    <!-- RO -->
     <div class="lang">
-      <strong>RO</strong>
+      <strong>RO</strong> · <a href="#en">EN</a>
     </div>
 
     <h1>Flora Forestieră Lemnoasă RO</h1>
@@ -92,10 +94,50 @@
     <footer>
       © <span id="year"></span> Florin Nicola · iOS application
     </footer>
+
+    <hr id="en" style="margin:40px 0; opacity:.25">
+
+    <!-- EN -->
+    <div class="lang">
+      <a href="#">RO</a> · <strong>EN</strong>
+    </div>
+
+    <h1>Flora Forestieră Lemnoasă RO</h1>
+    <p class="muted">
+      Educational iOS application for identifying woody forest species from Romania.
+    </p>
+
+    <h2>Support</h2>
+    <p>For questions or suggestions, please contact us at:</p>
+    <p>📧 <a href="mailto:nicolaflorin00@icloud.com">nicolaflorin00@icloud.com</a></p>
+
+    <h2>Privacy Policy</h2>
+    <p>
+      The <strong>Flora Forestieră Lemnoasă RO</strong> application does not collect, store, or transmit personal data.
+    </p>
+    <p>
+      The app does not use user accounts, analytics, tracking technologies, or third-party services.
+    </p>
+    <p>
+      🔗
+      <a
+        href="https://florinnicola000.github.io/flora-forestiera-lemnoasa-ro/privacy.html"
+        target="_blank"
+        rel="noopener noreferrer">
+        View full privacy policy
+      </a>
+    </p>
+
+    <footer>
+      © <span id="year-en"></span> Florin Nicola · iOS application
+    </footer>
+
   </div>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    const y = new Date().getFullYear();
+    document.getElementById('year').textContent = y;
+    document.getElementById('year-en').textContent = y;
   </script>
 </body>
 </html>
