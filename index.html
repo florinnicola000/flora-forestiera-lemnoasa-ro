@@ -53,12 +53,20 @@
       margin-top: 32px;
       font-size: 0.9em;
       opacity: 0.7;
+      text-align: center;
+    }
+
+    .separator {
+      margin: 40px 0;
+      opacity: 0.25;
+      border: none;
+      border-top: 1px solid currentColor;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
+  <main class="card">
 
     <!-- RO -->
     <div class="lang">
@@ -72,21 +80,15 @@
 
     <h2>Pagini oficiale</h2>
     <ul>
-      <li>
-        <a href="support.html">Suport</a>
-      </li>
-      <li>
-        <a href="privacy.html">Politica de confidențialitate</a>
-      </li>
+      <li><a href="support.html">Suport</a></li>
+      <li><a href="privacy.html">Politica de confidențialitate</a></li>
     </ul>
 
-    <footer>
-      © <span id="year"></span> Florin Nicola · iOS application
-    </footer>
-
-    <hr id="en" style="margin:40px 0; opacity:.25">
+    <hr class="separator">
 
     <!-- EN -->
+    <div id="en"></div>
+
     <div class="lang">
       <a href="#">RO</a> · <strong>EN</strong>
     </div>
@@ -98,24 +100,21 @@
 
     <h2>Official pages</h2>
     <ul>
-      <li>
-        <a href="support.html">Support</a>
-      </li>
-      <li>
-        <a href="privacy.html">Privacy Policy</a>
-      </li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
 
     <footer>
-      © <span id="year-en"></span> Florin Nicola · iOS application
+      © <span id="year"></span> Florin Nicola · iOS application
     </footer>
 
-  </div>
+  </main>
 
   <script>
-    const y = new Date().getFullYear();
-    document.getElementById('year').textContent = y;
-    document.getElementById('year-en').textContent = y;
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>
 </body>
 </html>
